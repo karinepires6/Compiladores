@@ -1,17 +1,17 @@
 import re
 
-texto = "abbbbbba,aaaaa,bababa,bbbbbbbb, ababababa,b"
-#padrao = "(abc)*a*"
-#padrao = "(ab)*|a*"
-#padrao = "(ba|bb)*|(ab|aa)*"
-padrao = "(ab+a)+"
-texto_separado = re.split("\W+", texto)
+text = "abbbbbba,aaaaa,bababa,bbbbbbbb, ababababa,b"
+#pattern = "(abc)*a*"
+#pattern = "(ab)*|a*"
+#pattern = "(ba|bb)*|(ab|aa)*"
+pattern = "(ab+a)+"
+splitted_text = re.split("\W+", text)
 
 
-for palavra in texto_separado:
-	resultado = re.fullmatch(padrao,palavra)
+for word in splitted_text:
+	result = re.fullmatch(pattern,word)
 	
-	if(resultado is None):
-		print("{} palavra nao pertence".format(palavra))
+	if(result is None):
+		print("{} palavra nao pertence".format(word))
 	else:
-		print("{} palavra pertence".format(palavra))
+		print("{} palavra pertence".format(word))
